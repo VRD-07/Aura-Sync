@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-socketio[asyncio_client]
+python-socketio[asgi]
+numpy
+pandas
+scikit-learn
+ortools

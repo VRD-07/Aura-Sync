@@ -1,0 +1,51 @@
+task_id,task_name,start_date,end_date,workers_assigned,machine_hours,depends_on
+T01,Site Mobilization & Fencing,03-03-2026,08-03-2026,10,33,
+T02,Topographic Survey,05-03-2026,08-03-2026,5,27,T01
+T03,Excavation for Main Plant,07-03-2026,19-03-2026,20,57,T02
+T04,Foundation Piling - Zone A,09-03-2026,24-03-2026,25,73,T03
+T05,Foundation Piling - Zone B,11-03-2026,26-03-2026,25,67,T03
+T06,Rebar Fabrication,13-03-2026,23-03-2026,8,56,T01
+T07,Rebar Placement - Foundation,15-03-2026,27-03-2026,15,67,"T04,T06"
+T08,Concreting - Main Slab,17-03-2026,22-03-2026,30,39,T07
+T09,Curing & Waterproofing,19-03-2026,29-03-2026,4,48,T08
+T10,Backfilling & Compaction,21-03-2026,28-03-2026,12,33,T09
+T11,Structural Steel Procurement,23-03-2026,22-04-2026,5,139,
+T12,Steel Column Erection - Phase 1,25-03-2026,04-04-2026,15,53,"T10,T11"
+T13,Roof Truss Assembly,27-03-2026,11-04-2026,12,79,T12
+T14,Gantry Crane Rail Installation,29-03-2026,06-04-2026,10,38,T12
+T15,Wall Cladding - North/South,31-03-2026,12-04-2026,10,65,T13
+T16,Wall Cladding - East/West,02-04-2026,14-04-2026,10,60,T15
+T17,Flooring - Heavy Duty Epoxy,04-04-2026,14-04-2026,20,57,T14
+T18,Mezzanine Floor Civil Work,06-04-2026,20-04-2026,15,75,T12
+T19,Drainage & Trenching,08-04-2026,16-04-2026,8,40,T10
+T20,Exterior Paving,10-04-2026,22-04-2026,10,65,T19
+T21,Primary Storage Tank Placement,12-04-2026,17-04-2026,25,35,T17
+T22,Secondary Tank Installation,14-04-2026,19-04-2026,20,38,T21
+T23,Pipe Rack Erection,16-04-2026,01-05-2026,18,74,T12
+T24,Main Process Piping Layout,18-04-2026,08-05-2026,35,91,"T23,T21"
+T25,Welding & Joint Testing,20-04-2026,15-05-2026,45,116,T24
+T26,Valve & Fitting Assembly,22-04-2026,02-05-2026,15,46,T25
+T27,Pump House Mechanical Setup,24-04-2026,06-05-2026,20,67,T17
+T28,Heat Exchanger Installation,26-04-2026,02-05-2026,30,41,T24
+T29,Hydrostatic Pressure Testing,28-04-2026,05-05-2026,12,36,T26
+T30,Insulation & Painting,30-04-2026,15-05-2026,10,65,T29
+T31,Main Substation Equipment,02-05-2026,12-05-2026,15,45,T12
+T32,Cable Trenching (Electrical),04-05-2026,16-05-2026,12,67,T19
+T33,Power Cable Laying,06-05-2026,24-05-2026,25,87,"T31,T32"
+T34,Control Room Panel Setup,08-05-2026,16-05-2026,15,42,T18
+T35,Instrumentation & Sensors,10-05-2026,25-05-2026,18,73,"T26,T34"
+T36,Lighting & Small Power,12-05-2026,24-05-2026,20,61,T16
+T37,Fire Alarm System,14-05-2026,24-05-2026,10,56,T36
+T38,UPS & Battery Banks,16-05-2026,21-05-2026,8,34,T34
+T39,Earthing & Lightning Protection,18-05-2026,28-05-2026,10,54,T10
+T40,SCADA / PLC Programming,20-05-2026,09-06-2026,10,88,T35
+T41,Cold Commissioning - Pumps,22-05-2026,01-06-2026,20,50,"T27,T33"
+T42,Hot Commissioning - Line A,24-05-2026,08-06-2026,25,73,"T41,T30"
+T43,Safety Audit & Compliance,26-05-2026,02-06-2026,5,34,"T37,T42"
+T44,HVAC System Final Test,28-05-2026,05-06-2026,12,40,T15
+T45,Environmental Clearance,30-05-2026,29-06-2026,3,132,T43
+T46,Operator Training Phase 1,01-06-2026,11-06-2026,15,45,T40
+T47,Final Snag List Clearing,03-06-2026,15-06-2026,20,60,T43
+T48,As-Built Drawing Submission,05-06-2026,20-06-2026,5,74,T47
+T49,Site De-mobilization,07-06-2026,14-06-2026,15,33,T47
+T50,Final Project Handover,09-06-2026,10-06-2026,5,20,"T48,T49"
