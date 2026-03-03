@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 const http = axios.create({
-  baseURL: '',
+  // In dev, Vite proxy handles /api calls.
+  // In production, set VITE_API_BASE (e.g. https://aura-sync.onrender.com).
+  baseURL: import.meta.env.VITE_API_BASE || '',
 });
 
 export async function getResults() {
